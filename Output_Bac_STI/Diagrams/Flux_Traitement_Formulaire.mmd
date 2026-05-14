@@ -1,0 +1,35 @@
+sequenceDiagram
+    participant U as Utilisateur
+    participant F as Formulaire HTML
+    participant J as JavaScript
+    participant P as PHP
+    participant S as Serveur
+    participant D as Base de Données
+
+    U->>F: Remplit formulaire
+    F->>J: Soumettre (submit)
+    
+    alt Validation JavaScript OK
+        J->>J: Valider champs
+        J->>P: Envoi AJAX / POST
+    else Validation JavaScript ÉCHEC
+        J->>F: Afficher erreurs
+        J-->>U: Correction
+    end
+    
+    P->>P: Filtre/Sanitize données
+    P->>D: Requête préparée
+    
+    alt Requête OK
+        D-->>P: Données insérées
+        P->>S: Confirmation
+        S-->>J: Réponse JSON
+        J->>F: Message succès
+    else Erreur SQL
+        D-->>P: Exception
+        P->>P: Gestion erreur
+        P-->>J: Erreur JSON
+        J->>F: Message erreur
+    end
+    
+    F->>U: Affichage final

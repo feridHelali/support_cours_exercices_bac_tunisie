@@ -1,0 +1,44 @@
+erDiagram
+    ELEVE {
+        int id_eleve PK
+        string nom
+        string prenom
+        string email
+        string classe
+        date date_naissance
+    }
+    
+    LIVRE {
+        int id_livre PK
+        string titre
+        string isbn
+        int annee_publication
+        int quantite_stock
+        string statut
+    }
+    
+    AUTEUR {
+        int id_auteur PK
+        string nom
+        string prenom
+        string nationalite
+    }
+    
+    CATEGORIE {
+        int id_categorie PK
+        string libelle
+        string description
+    }
+    
+    EMPRUNT {
+        int id_emprunt PK
+        date date_emprunt
+        date date_retour_prevu
+        date date_retour_effectif
+        string statut
+    }
+    
+    ELEVE ||--o{ EMPRUNT : "effectue"
+    LIVRE ||--o{ EMPRUNT : "concerné par"
+    AUTEUR ||--o{ LIVRE : "ecrit"
+    CATEGORIE ||--o{ LIVRE : "classifie"

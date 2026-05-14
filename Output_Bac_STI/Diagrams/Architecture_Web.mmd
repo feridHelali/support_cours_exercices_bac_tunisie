@@ -1,0 +1,33 @@
+graph TD
+    subgraph Client
+        A[Navigateur Web]
+        B[JavaScript]
+        C[DOM]
+    end
+    
+    subgraph Serveur
+        D[Serveur Web Apache]
+        E[PHP]
+        F[Session]
+        G[Cookies]
+    end
+    
+    subgraph Base_de_donnees
+        H[MySQL]
+        I[Tables]
+        J[Requetes SQL]
+    end
+    
+    A <-->|HTTP/HTTPS| D
+    B -->|Manipule| C
+    D -->|Execute| E
+    E -->|Genere HTML/CSS/JS| A
+    E <-->|PDO/PDO_MySQL| H
+    E -->|Stocke| F
+    E -->|Envoie| G
+    H -->|Contient| I
+    I -->|Interrogees par| J
+
+    style Client fill:#e1f5ff
+    style Serveur fill:#fff4e1
+    style Base_de_donnees fill:#ffe1e1
