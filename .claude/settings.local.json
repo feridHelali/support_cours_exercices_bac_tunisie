@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"D:\\\\51_Smartec_Deployment_VPS_Cours_Bac\\\\Cours_Bac_2026_3_Niveau_Bac\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "PowerShell(npm install *)"
+    ]
+  }
+}
