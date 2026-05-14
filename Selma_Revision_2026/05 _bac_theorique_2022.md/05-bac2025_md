@@ -1,0 +1,128 @@
+1 sur 2
+```Page
+## EXAMEN DU BACCALAURÉATSESSION 2022 NOUVEAU RÉGIME
+
+(^)
+RÉPUBLIQUE TUNISIENNE
+
+MINISTÈRE DE L’ÉDUCATION
+(^)
+
+## ÉPREUVE PRATIQUE D’INFORMATIQUE
+
+## Sections : Mathématiques, Sciences expérimentales et
+
+```
+Sciences techniques
+```
+## Coefficient de l’épreuve : 0.5 Durée : 1h
+
+```
+Important :
+```
+1. Une solution modulaire au problème posé est exigée.
+2. Dans le répertoire Bac2022, créez un dossier de travail ayant comme nom votre _numéro d’inscription_
+    (6 chiffres) et dans lequel vous devez enregistrer, au fur et à mesure, tous les fichiers solution à ce sujet.
+
+# Le nombre semi-premier
+
+Un nombre N est dit semi-premier lorsqu’il est égal au produit de deux nombres premiers non
+
+nécessairement distincts. C’est-à-dire N = k*k avec k est un nombre premier ou N = k*j avec k et j sont
+
+deux nombres premiers.
+
+Exemples :
+
+- 6 est un nombre semi-premier car 6 = 2 × 3 avec 2 et 3 sont deux nombres premiers.
+- 25 est un nombre semi-premier car 25 = 5 × 5 avec 5 est un nombre premier.
+- 831 est un nombre semi-premier car 831= 3 × 277 avec 3 et 277 sont deux nombres premiers
+- **8 n’est pas un nombre semi** - premier, car 8 = 2 × 4 avec 4 n’est pas un nombre premier.
+
+Pour vérifier si un entier naturel N (N > 2 ) est un nombre semi-premier ou non, on se propose de concevoir
+
+une interface graphique contenant les éléments suivants :
+
+```
+ Un label contenant le texte : "Nombre semi-premier"
+ Un label demandant la saisie d’un nombre : "Introduire un entier > 2 : "
+ Une zone de saisie permettant la saisie du nombre
+ Un bouton intitulé "Vérifier"
+ Un label pour afficher le message adéquat
+```
+## Travail demandé :
+
+```
+1) Concevoir une interface graphique comme illustrée ci-dessus et l’enregistrer, dans votre dossier de
+travail, sous le nom "InterfaceSemiPremier".
+2) Créer un programme Python et l’enregistrer, dans votre dossier de travail, sous le nom
+"NbrSemiPremier".
+3) Développer, dans le programme "NbrSemiPremier", une fonction SemiPremier(N) qui permet de
+vérifier si un entier N est semi-premier ou non.
+```
+```
+Kiteb.net : Le site web éducatif.
+```
+
+```
+Page 2 sur 2
+```
+```
+4) Dans le programme "NbrSemiPremier" :
+ ajouter les instructions permettant d’appeler l’interface graphique intitulée
+"InterfaceSemiPremier" en exploitant l’annexe ci-après.
+ développer un module "Play", qui s’exécute suite à un clic sur le bouton "Vérifier",
+permettant de récupérer l’entier N saisi, puis d’exploiter la fonction "SemiPremier" afin
+d’afficher le message adéquat via le label dédié à l’affichage de l’interface
+"InterfaceSemiPremier".
+N.B. :
+ Le candidat est appelé à développer un module qui permet de vérifier la primalité d’un entier
+sans faire recours à des fonctions prédéfinies telles que isprime().
+ l’affichage du message doit être conforme aux exemples d’exécution suivants :
+```
+### Exemples d’exécution :
+
+(^)
+
+## Grille d’évaluation
+
+```
+Tâches Nombre de points
+```
+### Conception de l’interface "InterfaceSemiPremier" 4 pts
+
+### Création et enregistrement du programme "NbrSemiPremier" 1 pt^
+
+### Développement de la fonction "SemiPremier" 6 pts
+
+```
+Ajout des instructions :
+```
+###  de l’interface "InterfaceSemiPremier"
+
+```
+ du module "Play"
+```
+```
+2 pts
+4 pts
+```
+Importation des bibliothèques nécessaires, modularité^ et cohérence^ 3 pts^
+
+## Annexe
+
+```
+from PyQt5.uic import loadUi
+from PyQt5.QtWidgets import QApplication
+......
+......
+app = QApplication([])
+windows = loadUi ("Nom_Interface.ui")
+windows.show()
+windows.Nom_Bouton.clicked.connect (Nom_Module)
+app.exec_()
+```
+```
+Kiteb.net : Le site web éducatif.
+```
+
